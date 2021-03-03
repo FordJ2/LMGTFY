@@ -57,7 +57,7 @@ async def idk(message):
 	msg = message.content.lower()
 
 	if msg == 'help;':
-		asyncio.sleep(0.5)
+		asyncio.sleep(1.25)
 		await message.channel.send('`lmgtfy; *whatever question you have been bothered with*`')
 
 	if msg == ('lmgtfy;gpu'):
@@ -67,15 +67,11 @@ async def idk(message):
 		await message.channel.send('https://docs.google.com/spreadsheets/d/1TSbLiQl8XQp0t47r7iGOMf9qpQJtw04ViP-IV-pocLU/edit#gid=0')
 
 	if msg.startswith('lmgtfy; '):
-		asyncio.sleep(0.5)
+		asyncio.sleep(1.25)
 		await message.channel.send(f"https://lmgtfy.app/?q={((message.content[8:]).replace(' ', '+'))}")
-	
-	if msg.startswith('lmgtfy;'):
-		asyncio.sleep(0.5)
-		await message.channel.send(f"https://lmgtfy.app/?q={((message.content[7:]).replace(' ', '+'))}")
 
 	if client.user.mentioned_in(message):
-		asyncio.sleep(0.5)
+		asyncio.sleep(1.25)
 		await message.channel.send(random.choice(ping_responses))
 
 #https://lmgtfy.app/?q=xxx
