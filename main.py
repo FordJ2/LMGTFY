@@ -81,4 +81,4 @@ async def idk(message):
 #https://lmgtfy.app/?q=xxx
 
 keep_alive()
-client.run('ODE2NjUxNDQxOTI1MjU5MzI2.YD-D7A.LYLNHYiX9yDqqOl6ttrmY39tVaM')
+client.run('TOKEN')
