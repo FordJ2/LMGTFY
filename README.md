@@ -10,3 +10,5 @@ bot link --> https://discord.com/oauth2/authorize?client_id=816651441925259326&s
 
 
 main resource --> https://lmgtfy.app/#gsc.tab=0
+
+secondary -->https://www.google.ca/?gws_rd=ssl
