@@ -72,8 +72,6 @@ async def idk(message):
 		asyncio.sleep(0.5)
 		await message.channel.send(random.choice(ping_responses))
 
-#https://lmgtfy.app/?q=xxx
-
 keep_alive()
 
 TOKEN = ''
