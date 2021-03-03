@@ -3,7 +3,7 @@ name = ('lmgtfy'.upper())
 print(
 	f"""
 	{name} 1.0.0
-	Copyright (c) there-are-higher-beings
+	Copyright (c) Jonathan Ford
 	Licensed under the GNU AGPL 3.0
 	"""
 )
@@ -15,7 +15,7 @@ import random
 from discord.ext import commands
 from keep_alive import keep_alive
 
-client = commands.Bot(command_prefix = [";"])
+client = commands.Bot(command_prefix = ["c;"])
 
 @client.event
 async def on_ready():
@@ -60,6 +60,12 @@ async def idk(message):
 		asyncio.sleep(0.5)
 		await message.channel.send('`lmgtfy; *whatever question you have been bothered with*`')
 
+	if msg == ('lmgtfy;gpu'):
+		await message.channel.send('https://docs.google.com/spreadsheets/d/1fafaO0s5JgwLTRmf1QdIAT46viUXXObbgYnYzehY-DQ/edit#gid=0')
+
+	if msg == ('lmgtfy;cpu'):
+		await message.channel.send('https://docs.google.com/spreadsheets/d/1TSbLiQl8XQp0t47r7iGOMf9qpQJtw04ViP-IV-pocLU/edit#gid=0')
+
 	if msg.startswith('lmgtfy; '):
 		asyncio.sleep(0.5)
 		await message.channel.send(f"https://lmgtfy.app/?q={((message.content[8:]).replace(' ', '+'))}")
@@ -72,7 +78,7 @@ async def idk(message):
 		asyncio.sleep(0.5)
 		await message.channel.send(random.choice(ping_responses))
 
-keep_alive()
+#https://lmgtfy.app/?q=xxx
 
-TOKEN = ''
-client.run(TOKEN)
+keep_alive()
+client.run('ODE2NjUxNDQxOTI1MjU5MzI2.YD-D7A.LYLNHYiX9yDqqOl6ttrmY39tVaM')
