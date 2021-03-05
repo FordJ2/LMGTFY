@@ -57,8 +57,9 @@ async def idk(message):
 		embedVar = discord.Embed(title="Help", description="LMGTFY helps you get what you need in a browser, but faster and simpler.", color=0x666699)
 		embedVar.add_field(name="Action 1", value="\nTakes use of the resource <https://lmgtfy.app/#gsc.tab=0>\n> `lmgtfy; *the stupid question someone asked you*`", inline=False)
 		embedVar.add_field(name="Action 2", value="\nCreates a direct link to google from discord using <https://www.google.ca/?gws_rd=ssl>\n> `google; *a question you have*`", inline=False)
-		embedVar.add_field(name="Action 3", value="\nProvides a link to a detailed graph of the price to preformance of either CPUs or GPUs\n> `lmgtfy;gpu`\n> `lmgtfy;cpu`", inline=False)
-		embedVar.add_field(name="Action 4", value="\nDisplayes the License as well as other additional information\n> `license;`")
+		embedVar.add_field(name="Action 3", value="\nProvides a link to `c:\#4617`'s GitHub\n> `lmgtfy;github`", inline=False)
+		embedVar.add_field(name="Action 4", value="\nProvides a link to a detailed graph of the price to preformance of either CPUs or GPUs\n> `lmgtfy;gpu`\n> `lmgtfy;cpu`", inline=False)
+		embedVar.add_field(name="Action 5", value="\nDisplayes the License as well as other additional information\n> `license;`")
 		await message.channel.send(embed=embedVar)
 		global helpVar
 		helpVar += helpVar + 1
@@ -94,6 +95,12 @@ async def idk(message):
 		global cpuVar
 		cpuVar += cpuVar + 1
 
+	if msg == ('lmgtfy;github'):
+		time.sleep(1.25)
+		await message.channel.send('https://github.com/there-are-higher-beings')
+		global gitVar
+		gitVar += gitVar + 1
+
 	if client.user.mentioned_in(message):
 		time.sleep(1)
 		await message.channel.send(random.choice(ping_responses))
@@ -107,7 +114,7 @@ async def idk(message):
 		embed3.add_field(name='Ping', value=f"Pinged {pingVar} times")
 		embed3.add_field(name='LMGTFY', value=f"Used {lmgtfyVar} times")
 		embed3.add_field(name='Google', value=f"Used {googleVar} times")
-		embed3.add_field(name='.', value='.')
+		embed3.add_field(name='GitHub', value=f"Used {gitVar} times")
 		embed3.add_field(name='GPU', value=f"Used {gpuVar} times")
 		embed3.add_field(name='CPU', value=f"Used {cpuVar} times")
 		embed3.add_field(name='.', value='.')
