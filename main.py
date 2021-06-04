@@ -104,4 +104,4 @@ async def ping(message):
 		write("6")
 
 f()
-client.run('ODE2NjUxNDQxOTI1MjU5MzI2.YD-D7A.Nb-D8M8Vhadnv3zMTgplzW-rNIU')
+client.run('TOKEN')
